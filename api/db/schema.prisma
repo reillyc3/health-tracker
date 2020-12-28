@@ -18,9 +18,10 @@ model User {
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  feeling   Int
-  body      String
-  createdAt DateTime @default(now())
+  id              Int      @id @default(autoincrement())
+  feelingPhysical Int
+  feelingMental   Int
+  body            String
+  createdAt       DateTime @default(now())
 
 }

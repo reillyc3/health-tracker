@@ -15,6 +15,14 @@ export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Post not found</div>
 
-export const Success = ({ post }) => {
-  return <Post post={post} />
+export const Success = ({ posts }) => {
+  return posts.map((post) => (
+    <article key={post.id}>
+      <header>
+        <h2>{post.feeling}</h2>
+      </header>
+      <p>{post.body}</p>
+      <div>Posted at: {post.createdAt}</div>
+    </article>
+  ))
 }
