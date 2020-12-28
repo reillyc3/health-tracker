@@ -1,11 +1,11 @@
 import { Link, routes } from '@redwoodjs/router'
 import NavLayout from 'src/layouts/NavLayout/NavLayout'
-import HealthPosts from 'src/components/HealthPostsCell'
+import HealthPostsCell from 'src/components/HealthPostsCell'
 
 const HomePage = () => {
   return <NavLayout>
 
-  <HealthPosts />
+  <HealthPostsCell />
   </NavLayout>
 
 }
