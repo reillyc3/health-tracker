@@ -1,5 +1,8 @@
 import { Link, routes } from '@redwoodjs/router'
+import { useAuth } from '@redwoodjs/auth'
+
 const NavLayout = ({ children }) => {
+  const { logIn, logOut, isAuthenticated } = useAuth()
   return (
     <>
       <header className="m-0">
@@ -31,6 +34,14 @@ const NavLayout = ({ children }) => {
 
                 <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   <Link to={routes.about()}>About</Link>
+                </li>
+                <li className="nav-item ml-3 px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 border-white-300 border-4">
+                  <button
+                    className="font-bold"
+                    onClick={isAuthenticated ? logOut : logIn}
+                  >
+                    {isAuthenticated ? 'LOG OUT' : 'LOG IN'}
+                  </button>
                 </li>
               </ul>
             </div>
