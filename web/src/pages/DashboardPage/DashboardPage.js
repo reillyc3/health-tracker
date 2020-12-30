@@ -1,16 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
 import NavLayout from 'src/layouts/NavLayout'
+import HealthPostsCell from 'src/components/HealthPostsCell'
 
 const DashboardPage = () => {
   return (
     <NavLayout>
-    <>
-      <h1>DashboardPage</h1>
-      <p>
-        My default route is named <code>dashboard</code>, link to me with `
-        <Link to={routes.dashboard()}>Dashboard</Link>`
-      </p>
-    </>
+      <Link to={routes.newPost()}>New Health Entry</Link>
+      <HealthPostsCell />
     </NavLayout>
   )
 }

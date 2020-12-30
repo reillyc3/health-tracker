@@ -30,10 +30,6 @@ const NavLayout = ({ children }) => {
                 </li>
 
                 <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-                  <Link to={routes.newPost()}>New Health Entry</Link>
-                </li>
-
-                <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   <Link to={routes.about()}>About</Link>
                 </li>
               </ul>

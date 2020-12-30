@@ -1,7 +1,10 @@
 export const QUERY = gql`
   query HealthPostsQuery {
-      posts {
-        id
+    posts {
+      id
+      feeling
+      body
+      createdAt
     }
   }
 `
@@ -13,5 +16,13 @@ export const Empty = () => <div>Empty</div>
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ posts }) => {
-  return JSON.stringify( posts )
+  return posts.map((post) => (
+    <article key={post.id}>
+      <header>
+        <h2>{post.feeling}</h2>
+      </header>
+      <p>{post.body}</p>
+      <div>Posted at: {post.createdAt}</div>
+    </article>
+  ))
 }
