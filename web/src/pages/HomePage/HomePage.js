@@ -6,24 +6,21 @@ const HomePage = () => {
   return (
     <NavLayout>
       <body>
-        <div className="my-0 pt-0 bg-red-400">
-          <section className="grid grid-cols-2 gap-7 container mx-auto flex justify-between bg-gray-500">
-            <div className="border-black border">
-              <h1 className="text-blue-500 font-extrabold font-sans text-4xl">
-                Start tracking your health
-              </h1>
-              <p className="text-yellow-500 font-extrabold font-sans text-xl">
-                The best way to see your health trends over time
-              </p>
-              <button className="bg-blue-500 text-white  rounded-full py-2 px-6 leading-relaxed">
-                Pre Order
-              </button>
-            </div>
-            <div className="border-black border">
-              <img src={heathly} alt="health options pic" />
-            </div>
+        <div className="relative overflow-hidden px-20 pb-6">
+          <section className="">
+            <div class="flex flex-col md:flex-row items-center pt-32 pb-16 md:pb-0">
+            <div class="md:w-1/2 lg:w-1/3 mb-4 sm:mb-16 md:mb-0">
+          <h2 class="text-xl font-bold text-secondary-600 uppercase mb-2">Make the change</h2>
+          <h1 class="text-4xl md:text-5xl font-bold text-secondary leading-tight mb-6 md:mb-10">Start Tracking Your Health</h1>
+          <a href="#" class="bg-primary px-0 md:px-0 py-3 md:py-4 text-lg md:text-xl text-secondary font-bold uppercase rounded hover:bg-primary-400">Sign Up Today</a>
+        </div>
+        <div class="mt-16 sm:mt-0 flex-1 flex justify-end">
+          <img calss="scale-100" src="../src/images/undraw_healthy.svg"></img>
+        </div>
+        </div>
           </section>
         </div>
+
       </body>
     </NavLayout>
   )
