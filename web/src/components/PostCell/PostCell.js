@@ -6,7 +6,7 @@ export const QUERY = gql`
       id
       feeling
       body
-      createdAt
+      createdAt(formatString: "MMMM Do, YYYY")
     }
   }
 `
@@ -18,6 +18,15 @@ export const Empty = () => <div>Post not found</div>
 export const Success = ({ posts }) => {
   return posts.map((post) => (
     <article key={post.id}>
+      <table>
+        <thead>
+          <tr>
+            <th>Feeling</th>
+            <th>Detials</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+      </table>
       <header>
         <h2>{post.feeling}</h2>
       </header>

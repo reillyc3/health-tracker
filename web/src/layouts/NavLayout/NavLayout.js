@@ -6,7 +6,7 @@ const NavLayout = ({ children }) => {
   return (
     <>
       <header className="m-0">
-        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-blue-500 mb-3">
+        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-blue-500 mb-0">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
               <li className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white">
@@ -28,9 +28,11 @@ const NavLayout = ({ children }) => {
               id="example-navbar-warning"
             >
               <ul className="flex flex-col lg:flex-row list-none ml-auto">
-                <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
-                  <Link to={routes.dashboard()}>Dasboard</Link>
-                </li>
+                {isAuthenticated && (
+                  <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                    <Link to={routes.dashboard()}>Dasboard</Link>
+                  </li>
+                )}
 
                 <li className="nav-item px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   <Link to={routes.about()}>About</Link>
